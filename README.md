@@ -1,188 +1,119 @@
-# alx-low_level_programming
-Resources
+# **C - Hello, World**
 
+## General
 
-Everything you need to know to start with C.pdf (You do not have to learn everything in there yet, but make sure you read it entirely first)
+* Why C programming is awesome (don’t forget to tweet today, with the hashtag #cisfun :))
+* Who invented C
+* Who are Dennis Ritchie, Brian Kernighan and Linus Torvalds
+* What happens when you type gcc main.c
+* What is an entry point
+* What is main
+* How to print text using printf, puts and putchar
+* How to get the size of a specific type using the unary operator sizeof
+* How to compile using gcc
+* What is the default program name when compiling with gcc
+* What is the official Alx C coding style and how to check your code with betty-style
+* How to find the right header to include in your source code when using a standard library function
+* How does the main function influence the return value of the program
 
-Dennis Ritchie
+## Requirements C
 
-“C” Programming Language: Brian Kernighan
+* Allowed editors: vi, vim, emacs
+* All your files will be compiled on Ubuntu 14.04 LTS using gcc 4.8.4
+* All your files should end with a new line
+* A README.md file at the root of the Alx-low_level_programming repo, containing a description of the repository
+* A README.md file, at the root of the folder of this project, containing a description of the project
+* There should be no errors and no warnings during compilation
+* You are not allowed to use system
+* Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
 
-Why C Programming Is Awesome
+## 0-preprocessor: Preprocessor 
 
-Learning to program in C part 1
+A script that runs a *C* file through the preprocessor and save the result into another file. The C file name will be saved in the variable *$CFILE*; The output should be saved in the file *c* using *gcc $CFILE -E -o c*.
 
-Learning to program in C part 2
+## 1-compiler: Compiler
 
-Understanding C program Compilation Process
+A script that compiles a C file but does not link. The *C* file name will be saved in the variable *$CFILE*; The output file should be named the same as the *C* file, but with the extension *.o* instead of *.c*; 
 
-Betty Coding Style
+*Example:* if the C file is *main.c*, the output file should be *main.o* using *gcc -c $CFILE*.
 
-Hash-bang under the hood (Look at only after you finish consuming the other resources)
+## 2-assembler: Assembler 
 
-Linus Torvalds on C vs. C++ (Look at only after you finish consuming the other resources)
+A script that generates the assembly code of a *C* code and save it in an output file. The *C* file name will be saved in the variable *$CFILE*; The output file should be named the same as the *C* file, but with the extension *.s* instead of *.c*.
 
-man or help:
+*Example:* if the *C* file is *main.c*, the output file should be *main.s* using *gcc -S $CFILE*.
 
+## 3-name: Name 
 
-gcc
+A script that compiles a *C* file and creates an executable named *cisfun*. The *C* file name will be saved in the variable *$CFILE* using *gcc $CFILE -o cisfun*.
 
-printf (3)
+## 4-puts.c: Hello, puts 
 
-puts
+A *C* program that prints exactly *"Programming is like building a multilingual puzzle, followed by a new line.*. Use the function *puts*; You are not allowed to use *printf*; Your program should end with the value *0* using:
 
-putchar
+#include <stdio.h>
 
-Learning Objectives
+int main(void)
+{
+        puts("Programming is like building a multilingual puzzle\n");
+        return (0);
+}
 
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+## 5-printf.c: Hello, printf 
 
+A *C* program that prints exactly *with proper grammar, but the outcome is a piece of art,*, followed by a new line. Use the function *printf*; You are not allowed to use the function *puts*; Your program should return *0*; Your program should compile without warning when using the *-Wall gcc* option using:
 
+{
+#include <stdio.h>
 
-General
+int main(void)
+{
+        printf("with proper grammar, but the outcome is a piece of art,\n");
+        return (0);
+}
+}
 
-Why C programming is awesome
+## 6-size.c: Size is not grandeur, and territory does not make a nation
 
-Who invented C
+A *C* program that prints the size of various types on the computer it is compiled and run on. You should produce the exact same output as in the example; Warnings are allowed; Your program should return *0*; You might have to install the package *libc6-dev-i386* on your Linux (Vagrant) to test the *-m32 gcc* option using:
 
-Who are Dennis Ritchie, Brian Kernighan and Linus Torvalds
+{
+#include <stdio.h>
 
-What happens when you type gcc main.c
+int main(void)
+{
+	int a;
+	long int b;
+	long long int c;
+	char d;
+	float f;
 
-What is an entry point
+	printf("Size of a char: %lu byte(s)\n", (unsigned long)sizeof(d));
+	printf("Size of an int: %lu byte(s)\n", (unsigned long)sizeof(a));
+	printf("Size of a long int: %lu byte(s)\n", (unsigned long)sizeof(b));
+	printf("Size of a long long int: %lu byte(s)\n", (unsigned long)sizeof(c));
+	printf("Size of a float: %lu byte(s)\n", (unsigned long)sizeof(f));
+	return (0);
+}
+}
 
-What is main
+## 100-intel: Intel 
 
-How to print text using printf, puts and putchar
+A script that generates the assembly code (Intel syntax) of a *C* code and save it in an output file. The *C* file name will be saved in the variable *$CFILE*. The output file should be named the same as the *C* file, but with the extension *.s* instead of *.c*.
 
-How to get the size of a specific type using the unary operator sizeof
+*Example:* if the *C* file is *main.c*, the output file should be *main.s* using *gcc -S -masm=intel $CFILE*.
 
-How to compile using gcc
+## 101-quote.c: UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity 
 
-What is the default program name when compiling with gcc
+A *C* program that prints exactly *and that piece of art is useful" - Dora Korpar, 2015-10-19*, followed by a new line, to the standard error. You are not allowed to use any functions listed in the *NAME* section of the *man (3) printf or man (3) puts*; Your program should return *1*; Your program should compile without any warnings when using the *-Wall gcc* option using:
 
-What is the official C coding style and how to check your code with betty-style
+{
+#include <stdio.h>
 
-How to find the right header to include in your source code when using a standard library function
+int main(void)
+{
+	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 61);
 
-How does the main function influence the return value of the program
-
-Copyright - Plagiarism
-
-You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
-
-You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
-
-You are not allowed to publish any content of this project.
-
-Any form of plagiarism is strictly forbidden and will result in removal from the program.
-
-Requirements
-
-C
-
-Allowed editors: vi, vim, emacs
-
-All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
-
-All your files should end with a new line
-
-A README.md file at the root of the repo, containing a description of the repository
-
-A README.md file, at the root of the folder of this project, containing a description of the project
-
-There should be no errors and no warnings during compilation
-
-You are not allowed to use system
-
-Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-
-Shell Scripts
-
-Allowed editors: vi, vim, emacs
-
-All your scripts will be tested on Ubuntu 20.04 LTS
-
-All your scripts should be exactly two lines long ($ wc -l file should print 2)
-
-All your files should end with a new line
-
-The first line of all your files should be exactly #!/bin/bash
-
-More Info
-
-Betty linter
-
-To run the Betty linter just with command betty <filename>:
-
-
-
-Go to the Betty repository
-
-Clone the repo to your local machine
-
-cd into the Betty directory
-
-Install the linter with sudo ./install.sh
-
-emacs or vi a new file called betty, and copy the script below:
-
-#!/bin/bash
-
-# Simply a wrapper script to keep you from having to use betty-style
-
-# and betty-doc separately on every item.
-
-# Originally by Tim Britton (@wintermanc3r), multiargument added by
-
-# Larry Madeo (@hillmonkey)
-
-
-
-BIN_PATH="/usr/local/bin"
-
-BETTY_STYLE="betty-style"
-
-BETTY_DOC="betty-doc"
-
-
-
-if [ "$#" = "0" ]; then
-
-    echo "No arguments passed."
-
-    exit 1
-
-fi
-
-
-
-for argument in "$@" ; do
-
-    echo -e "\n========== $argument =========="
-
-    ${BIN_PATH}/${BETTY_STYLE} "$argument"
-
-    ${BIN_PATH}/${BETTY_DOC} "$argument"
-
-done
-
-Once saved, exit file and change permissions to apply to all users with chmod a+x betty
-
-Move the betty file into /bin/ directory or somewhere else in your $PATH with sudo mv betty /bin/
-
-You can now type betty <filename> to run the Betty linter!
-
-
-
-Quiz questions
-
-Great! You've completed the quiz successfully! Keep going! (Show quiz)
-
-Tasks
-
-0. Preprocessor
-
-mandatory
-
-Write a script that runs a C file through the preprocessor and save the result into another file. The C file name will be saved in the variable $CFILE. The output should be saved in the file c
+	return (1);
+}
+}

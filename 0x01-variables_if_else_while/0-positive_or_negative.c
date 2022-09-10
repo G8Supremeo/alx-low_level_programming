@@ -17,23 +17,23 @@
  */
 int main(void)
 {
-	int z;
+	int n;
 
 	srand(time(0));
-	z = rand() - RAND_MAX / 2;
+	n = rand() - RAND_MAX / 2;
 
 /* This is the loop over the random number */
-	if (z > 0)
+	if (n > 0)
 	{
-		printf("%d is positive\n", z);
+		printf("%d is positive\n", n);
 	}
-	else if (z == 0)
+	else if (n == 0)
 	{
-		printf("%d is zero\n", z);
+		printf("%d is zero\n", n);
 	}
 	else
 	{
-		printf("%d is negative\n", z);
+		printf("%d is negative\n", n);
 	}
 
 	return (0);

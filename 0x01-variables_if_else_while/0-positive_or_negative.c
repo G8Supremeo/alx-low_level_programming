@@ -25,15 +25,15 @@ int main(void)
 /* This is the loop over the random number */
 	if (z > 0)
 	{
-		printf("%d is positive \n", z);
+		printf("%d is positive\n", z);
 	}
-	else if (z < 0)
+	else if (z == 0)
 	{
-		printf("%d is negative \n", z);
+		printf("%d is zero\n", z);
 	}
 	else
 	{
-		printf("%d is zero \n", z);
+		printf("%d is negative\n", z);
 	}
 
 	return (0);

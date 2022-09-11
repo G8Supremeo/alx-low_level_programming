@@ -1,8 +1,5 @@
 #include <stdio.h>
 
-#include <stdlib.h>
-
-
 /**
  * main - Entry point
  *
@@ -16,18 +13,18 @@
 
 int main(void)
 {
-	int numb;
-	char letter;
+char C;
 
+for (C = '0'; C <= '9'; C++)
+{
+	putchar(C);
+}
 
-	for (numb = 0; numb < 10; numb++)
-		putchar((numb % 10) + '0');
-	for (letter = 'a'; letter <= 'f'; letter++)
-	       putchar(letter);
+for (C = 'a'; C <= 'f'; C++)
+{
+	putchar(C);
+}
 
-
-	putchar('\n');
-
-
-	return (0);
+putchar('\n');
+return (0);
 }

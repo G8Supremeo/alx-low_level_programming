@@ -1,20 +1,22 @@
 #include "main.h"
 
 /**
- * print_putchar - print _putchar and \n
+ * main - print _putchar
+ *
+ * Description: print _putchar and \n
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar(104);
-	_putchar(97);
-	_putchar(114);
+	char word[8] = "_putchar";
+	int i;
+
+	for (i = 0; i < 9; i++)
+	{
+		_putchar(word[i]);
+	}
+
 	_putchar('\n');
 
 

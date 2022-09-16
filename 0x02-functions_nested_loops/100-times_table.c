@@ -20,12 +20,14 @@ void print_times_table(int n)
 
 			for (num2 = 1; num2 <= n; num2++)
 			{
-				_putchar(' ');
 				_putchar(',');
+				_putchar(' ');
 
 				prod = (num1 * num2);
 
-				if (prod <= 9 || prod <= 99)
+				if (prod <= 99)
+					_putchar(' ');
+				if (prod <= 9)
 					_putchar(' ');
 
 

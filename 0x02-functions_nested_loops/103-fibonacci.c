@@ -18,8 +18,9 @@ int main(void)
 	for (y = 2; y < 50; y++)
 	{
 		fibonacci[y] = fibonacci[y - 1] + fibonacci[y - 2];
+
 		if ((fibonacci[y] % 2) == 0 && (fibonacci[y] < 4000000))
-				sum += fibonacci[y];
+			sum += fibonacci[y];
 	}
 
 	printf("%ld\n", sum);

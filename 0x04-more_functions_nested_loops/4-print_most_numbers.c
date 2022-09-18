@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_numbers - this function prints the numbers, 
+ * print_numbers - this function prints the numbers,
  * from 0 to 9 except 2 & 4
  */
 

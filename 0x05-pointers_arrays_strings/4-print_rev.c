@@ -2,7 +2,8 @@
 
 /**
  * _puts - this function prints a string to stdout
- * @*str: the pointer holding the address of the string to be printed
+ * @s: the pointer holding the address of the string to be
+ * printed
  */
 
 void print_rev(char *s)

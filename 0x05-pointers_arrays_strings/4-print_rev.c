@@ -5,10 +5,15 @@
  * @*str: the pointer holding the address of the string to be printed
  */
 
-void _puts(char *str)
+void print_rev(char *s)
 {
-	while(*str)
-		_putchar(*str++);
+	int len = 0;
+
+	while (s[len] != '\0')
+		len++;
+
+	while (len)
+		_putchar(s[--len]);
 
 	_putchar('\n');
 }

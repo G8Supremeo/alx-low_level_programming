@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _puts - this function prints a string to stdout
+ * print_rev - this function prints a string to stdout
  * @s: the pointer holding the address of the string to be
  * printed
  */

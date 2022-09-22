@@ -22,8 +22,6 @@ An introductory project on:
 
 **[2-strlen.c](2-strlen.c)** - function that returns the length of a string.
 
-**[3-puts.c](3-puts.c)
-
 **[3-puts.c](3-puts.c)** - function that prints a string, followed by a new line, to stdout.
 
 **[4-print_rev.c](4-print_rev.c)** - function that prints a string, in reverse, followed by a new line.

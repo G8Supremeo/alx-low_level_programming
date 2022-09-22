@@ -39,4 +39,4 @@ An introductory project on:
 ### Advanced
 **[100-atoi.c](100-atoi.c)** - converts a string to an integer.
 
-**[101-keygen.c](101-keygen.c)** - generates random valid passwords for the program [101-crackme](https://github.com/holbertonschool/0x04.c).
+**[101-keygen.c](101-keygen.c)** - generates random valid passwords for the program [101-crackme](101-crackme).

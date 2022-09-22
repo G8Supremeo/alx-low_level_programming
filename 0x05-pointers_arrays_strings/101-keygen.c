@@ -1,58 +1,47 @@
-#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-void randompg(int X)
+/**
+ * main - random password generator for 101-crackme
+ * Return: always 0
+ */
+
+int main(void)
 {
-	int c = 0;
-	int randomizer = 0;
+	int i, j, k, s;
+	char c[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char p[58];
 
-	srand((unsigned int)(time(NULL)));
+	srand(time(NULL));
 
-	char numbers[] = "012356789";
-	char letter[] = "abcdefghijklmnopqrstuvwxyz";
-	char LETTER[] = "ABCWDEFXGHIYJKYLMSQTUZNOPRV";
-	char symbols[] = "!@#$%^&\\*?>/<\"|/+-";
-
-	char password[X];
-
-	randomizer = rand() % 4;
-
-	for (c = 0; c < X; c++)
+	while (s != 2772)
 	{
-		if (randomizer == 1)
+		i = k = s = 0;
+		
+		while ((2772 - 122) > s)
+			{
+				j = rand() % 62;
+				p[i] = c[j];
+				s += c[j];
+				i++;
+			}
+
+		while (c[k])
 		{
-			password[c] = numbers[rand() % 10];
-			randomizer = rand() % 4;
-			printf("%c", password[c]);
-		}
-		else if (randomizer == 2)
-		{
-			password[c] = symbols[rand() % 18];
-			randomizer = rand() % 4;
-			printf("%c", password[c]);
-		}
-		else if (randomizer == 3)
-		{
-			password[c] = LETTER[rand() % 26];
-			randomizer = rand() % 4;
-			printf("%c", password[c]);
-		}
-		else
-		{
-			password[c] = letter[rand() % 26];
-			randomizer = rand() %  4;
-			printf("%c", password[c]);
+			if (c[k] == (2772 - s))
+				{
+					p[i] = c[k];
+					s += c[k];
+					i++;
+
+					break;
+				}
+			k++;
 		}
 	}
-}
+	p[i] = '\0';
+	printf("%s", p);
 
-int main()
-{
-int X = 12;
-
-randompg(X);
-printf("\n");
-return 0;
+	return (0);
 }

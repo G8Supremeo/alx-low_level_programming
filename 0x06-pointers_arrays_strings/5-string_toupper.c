@@ -13,8 +13,10 @@ char *string_toupper(char *s)
 
 	while (*(s + i))
 	{
-		if (*(s + i) >= 97 && *(s + i) <= 122)
-			*(s + 1) -= 32;
+		if (*(s + i) >= 'a' && *(s + i) <= 'z')
+		{
+			*(s + 1) -= ('a' - 'A');
+		}
 
 		i++;
 	}

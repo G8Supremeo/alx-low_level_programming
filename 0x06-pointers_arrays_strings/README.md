@@ -1,6 +1,6 @@
 # POINTERS & ARRAYS
 
-# 0x04. C - Pointers, arrays and strings
+# 0x06. C - Pointers, arrays and strings
 ## About
 An introductory project on:
 - pointers and how to use them

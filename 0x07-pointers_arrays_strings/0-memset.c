@@ -4,7 +4,7 @@
   * _memset - A function that fills a buffer memory with a constant byte
   * @s: Pointer holding the address of the memory to be filled
   * @b: constant byte to fill the memory
-  *
+  * @n: first bytes or size of memory area to be filled
   * Return: pointer to the memory area @s
   */
 

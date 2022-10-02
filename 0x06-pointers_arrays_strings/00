@@ -1,0 +1,38 @@
+// Online C compiler to run C program online
+##include <stdio.h>
+void print_buffer(char *b, int size);
+
+int main(void)
+{
+    char buffer[] = "This is a string!\0And this is the rest of the #buffer :)\1\2\3\4\5\6\7#cisfun\n\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x20\x21\x34\x56#pointersarefun #infernumisfun\n";
+
+    printf("%s\n", buffer);
+    printf("---------------------------------\n");
+    print_buffer(buffer, sizeof(buffer));
+    return (0);
+}
+
+void print_buffer(char *b, int size)
+{
+    int i;
+    int j = 0;
+    char ten[] = "\0\0\0\0\0\0\0\0\0\0";
+    char *tp = 10;
+    
+    for (i = 0; i < size; i++)
+    {
+        if (j == 0)
+        {
+            printf("%08x", i);
+        }
+        if (isprint (*b))
+        tp[j] = *b;
+        else
+        tp[j] = '.';
+        
+        if (i % 2 == 0)
+        {
+            
+        }
+    }
+}

@@ -10,19 +10,49 @@
 
 void print_buffer(char *b, int size)
 {
-	int byte, index;
-
-	for (byte = 0; byte < size; byte += 10)
 	{
-		printf("%08x: " byte);
-
-		for (index = 0; index < 10; index++)
-		{
-			if ((index + byte) >= size)
-				printf(" ");
-			else
-				printf("%02x", *(b + index + byte));
-
-			if ((index % 2) != 0 && index != 0)
-				printf(" ");
-		}
+    int i;
+    int j = 0;
+    int k;
+    char ten[] = "\0\0\0\0\0\0\0\0\0\0";
+    char *tp = ten;
+    
+    for (i = 0; i < size; i++)
+    {
+        if (j == 0)
+        {
+            printf("%08x:", i);
+        }
+        if (isprint (*b))
+        tp[j] = *b;
+        else
+        tp[j] = '.';
+        
+        if (i % 2 == 0)
+        {
+            printf("%c", ' ');
+        }
+        printf("%02x", *b);
+        
+        if ((i + 1) % 10 == 0)
+        {
+            printf(" %s\n", tp); j = 0;
+            
+            for (k = 0; k < 10; k++)
+            {
+                tp[k] = '\0';
+            }
+        }
+        else
+        {
+            j++;
+        }    
+        b++;
+    }
+    if (j != 0)
+    {
+        for (k = 0; k < (10 - j) * 2 + (10 - j) / 2; k++)
+        printf(" ");
+        printf(" %s\n", tp);
+    }
+}

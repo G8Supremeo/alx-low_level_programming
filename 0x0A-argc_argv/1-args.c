@@ -5,7 +5,7 @@
   * The program prints a number, followed by a new line
   * @argc: number of arguments passed into the program
   * @argv: array which holds the names of all the arguments
-  * passed into the program
+  * passed into the program. This arg was unsed in the program
   *
   * Return: Always 0
   */

@@ -1,25 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/**   * main - a program that prints all arguments it receives.   
-
-      5   * All arguments should be printed, including the first one  
-
-        6   * only print one argument per line, ending with a new line  
-
-	  7   *                                                           
-
-	    8   * @argc: number of arguments passed into the program        
-
-	      9   * @argv: array which holds the names of all the arguments   
-
-	       10   * passed into the program                                   
-
-	        11   *                                                           
-
-		 12   * Return: Always 0                                          
-
-		  13   */   
+/**
+  * main - a program that multiplies two numbers.
+  * the program should print the result of the multiplication, followed
+  * by a new line, assuming that the two numbers and result of the multiplication
+  * can be stored in an integer. If the program does not receive two arguments,
+  * the program should print Error, followed by a new line, and return 1
+  * 
+  * @argc: number of arguments passed into the program
+  * @argv: array which holds the names of all the arguments
+  * passed into the program
+  *
+  * Return: Always 0
+  */
 
 int main (int argc, char *argv[])
 {

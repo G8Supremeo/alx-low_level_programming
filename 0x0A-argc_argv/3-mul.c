@@ -13,7 +13,7 @@
   * @argv: array which holds the names of all the arguments
   * passed into the program
   *
-  * Return: Always 0
+  * Return: 1 if Error else Always 0
   */
 
 int main(int argc, char *argv[])
@@ -32,7 +32,8 @@ int main(int argc, char *argv[])
 	else
 	{
 		printf("Error\n");
+		return(1);
 	}
 
-	return (1);
+	return (0);
 }

@@ -30,7 +30,9 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	else if (amount <= 0)
+	{
 		printf("0\n");
+	}
 	else
 	{
 		for (i = 0; i < 5; i++)

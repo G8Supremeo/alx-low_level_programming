@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	else if (amount < 0)
+	else if (amount <= 0)
 		puts("0");
 	else
 	{

@@ -4,7 +4,7 @@
   * create_array - A function that creates an array of chars,
   * initializes it with a specific char
   * @size: number of elements
-  * @c: char to initialize array with 
+  * @c: char to initialize array with
   *
   * Return: NULL if size is 0 or if malloc fails, else ptr(mem)
   */

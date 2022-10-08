@@ -4,9 +4,9 @@
   * create_array - A function that creates an array of chars,
   * initializes it with a specific char
   * @size: number of elements
-  * @c: data type in the buffer
+  * @c: char to initialize array with 
   *
-  * Returns NULL if size is 0 or if it fails, else ptr
+  * Return: NULL if size is 0 or if malloc fails, else ptr(mem)
   */
 
 char *create_array(unsigned int size, char c)

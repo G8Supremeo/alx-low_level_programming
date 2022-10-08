@@ -11,10 +11,11 @@
 char *_strdup(char *str)
 {
 	char *mem;
-	int i = 0;
-	int size = strlen(str);
+	int j, i = 0;
 
-	mem = malloc(size * sizeof(char));
+	for (j = 0; str[j]; j++);
+
+	mem = malloc(j * sizeof(char));
 
 	if (str == NULL)
 	{
@@ -26,7 +27,7 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		while (i < size)
+		while (i < j)
 		{
 			mem[i] = str[i];
 			i++;

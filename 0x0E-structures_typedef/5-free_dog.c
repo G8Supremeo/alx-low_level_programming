@@ -3,7 +3,7 @@
 
 /**
   * free_dog - A function that frees dogs
-  * @dog_t: struct dog newtype
+  *
   * @d: memory to be freed
   */
 

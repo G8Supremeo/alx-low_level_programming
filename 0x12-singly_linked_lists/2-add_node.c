@@ -6,11 +6,11 @@
   * Return: length of the str
   */
 
-unsigned int _strlen(char *str)
+size_t _strlen(char *str)
 {
-	unsigned int i;
+	size_t i;
 
-	for (i = 1; str[i]; i++)
+	for (i = 0; str[i]; i++)
 		;
 	return (i);
 }

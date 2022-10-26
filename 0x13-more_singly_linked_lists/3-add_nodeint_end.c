@@ -1,27 +1,12 @@
 #include "lists.h"
 
 /**
-  * _strlen - A function that returns the length of a str
-  * @str: string pointer
-  * Return: length of the str
-  */
-
-size_t _strlen(char *str)
-{
-	size_t i;
-
-	for (i = 0; str[i]; i++)
-		;
-	return (i);
-}
-
-/**
-  * add_node_end - A func that  adds a new node at the bend of a list_t list.
-  * @head: linked list_t list head pointer
-  * @str: string to be added
+  * add_nodeint_end - A func that  adds a new node at the bend of a list_t list.
+  * @head: linked listint_t list head pointer
+  * @n: int
   * Return:the address of the new element, or NULL if it failed
   */
-list_t *add_node_end(list_t **head, const char *str)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	list_t *new_node;
 	list_t *last_node;

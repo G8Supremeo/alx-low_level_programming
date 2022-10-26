@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
-  * add_nodeint_end - A func that  adds a new node at the bend of a list_t list.
+  * add_nodeint_end - A func that  adds a new node at the bend of a list.
   * @head: linked listint_t list head pointer
   * @n: int
   * Return:the address of the new element, or NULL if it failed
@@ -10,7 +10,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *new_node  = malloc(sizeof(listint_t));
 	listint_t *tmp;
-	
+
 	tmp = *head;
 	if (new_node == NULL)
 	{

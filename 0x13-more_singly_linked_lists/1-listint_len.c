@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
-  * listint_len - A func that returns the number of elements in a linked listint_t
+  * listint_len - A func that returns the number of elements in a linked list
   * @h: linked listint_t list pointer
   * Return: the number of elements
   */

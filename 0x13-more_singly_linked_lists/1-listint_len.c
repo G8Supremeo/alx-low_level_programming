@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
-  * list_len - A func that returns the number of elements in a linked list_t
-  * @h: linked list_t list pointer
+  * listint_len - A func that returns the number of elements in a linked listint_t
+  * @h: linked listint_t list pointer
   * Return: the number of elements
   */
 
-size_t list_len(const list_t *h)
+size_t listint_len(const listint_t *h)
 {
 
 	size_t i;
